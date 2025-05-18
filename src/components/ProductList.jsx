@@ -1,6 +1,6 @@
 import React, { useCallback } from "react";
 import ProductItem from "./ProductItem";
-import "./ProductList.css";
+import "../App.css";
 
 const ProductList = ({ productos, onUpdate, onDelete, onEdit }) => {
   const memoizedOnUpdate = useCallback(onUpdate, [onUpdate]);

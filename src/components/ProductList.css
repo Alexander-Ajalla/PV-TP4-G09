@@ -1,7 +1,0 @@
-.product-list {
-  list-style: none;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(280px, 1fr)); /* Fixed to 3 columns */
-  gap: 1.5rem;
-}
