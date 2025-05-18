@@ -2,32 +2,51 @@
 import "ProductItem.css";
 
 export const ProductItem = (product, onUpdate, onDelete) => {
-  return (
-    <li class="container">
-      <h2>{product.title}</h2>
-      <p>Precio: ${product.price}</p>
-      <p>Descuento: {product.discountPercent}%</p>
-      <p>Precio Final: ${product.salePrice}</p>
-      <p>Stock disponible: {product.stock}</p>
+  const { id, description, price, discountPercent, discountPrice, stock } =
+    product;
 
-      <button
-        id="btnUpdate"
-        class="btn-blue"
-        onClick={() => {
-          onUpdate(product.id);
-        }}
-      >
-        Modificar
-      </button>
-      <button
-        id="btnDelete"
-        class="btn-red"
-        onClick={() => {
-          onDelete(product.id);
-        }}
-      >
-        Eliminar
-      </button>
+  const formatUnit = (stock) => (stock === 1 ? `unidad` : `unidades`);
+
+  return (
+    <li class="product-item">
+      <div className="product-item-details">
+        <p>
+          <strong>ID:</strong> {id}
+        </p>
+        <p>
+          <strong>Descripción:</strong> {description}
+        </p>
+        <p>
+          <strong>Precio Unitario:</strong> ${price.toFixed(2)}
+        </p>
+        <p>
+          <strong>Descuento:</strong> {discountPercent}%
+        </p>
+        <p>
+          <strong>Precio con Descuento:</strong> ${discountPrice.toFixed(2)}
+        </p>
+        <p>
+          <strong>Cantidad:</strong> {stock} {formatUnit(stock)}
+        </p>
+      </div>
+      <div className="product-item-actions">
+        <button
+          className="update-btn"
+          onClick={() => {
+            onUpdate(product);
+          }}
+        >
+          Modificar
+        </button>
+        <button
+          className="delete-btn"
+          onClick={() => {
+            onDelete(id);
+          }}
+        >
+          Eliminar
+        </button>
+      </div>
     </li>
   );
 };
