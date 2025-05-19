@@ -1,13 +1,63 @@
-.container .btn-blue .btn-red {
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-}
-.btn-blue {
-  background-color: blue;
+.product-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 12px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.2s ease;
 }
 
-.btn-red {
-  background-color: red;
+.product-item:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-item-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.product-item-details p {
+  margin: 4px 0;
+  line-height: 1.4;
+}
+
+.product-item-details strong {
+  color: #333;
+  font-weight: 600;
+}
+
+.product-item-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-btn .delete-btn {
+  transition: background-color 0.2s ease, filter 0.2s ease;
+}
+
+.edit-btn {
+  background-color: #ffc107;
+  color: #333;
+}
+
+.edit-btn:hover {
+  background-color: #d39e00;
+  filter: brightness(95%);
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #a71d2a;
+  filter: brightness(95%);
 }
