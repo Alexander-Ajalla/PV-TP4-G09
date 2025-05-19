@@ -1,6 +1,6 @@
 import "ProductItem.css";
 
-export const ProductItem = (producto, onUpdate, onDelete) => {
+const ProductItem = (producto, onEdit, onDelete) => {
   const {
     id,
     descripcion,
@@ -37,9 +37,9 @@ export const ProductItem = (producto, onUpdate, onDelete) => {
       </div>
       <div className="product-item-actions">
         <button
-          className="update-btn"
+          className="edit-btn"
           onClick={() => {
-            onUpdate(producto);
+            onEdit(producto);
           }}
         >
           Modificar
