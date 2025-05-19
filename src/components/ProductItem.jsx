@@ -1,9 +1,14 @@
-//import ProductList from "./";
 import "ProductItem.css";
 
-export const ProductItem = (product, onUpdate, onDelete) => {
-  const { id, description, price, discountPercent, discountPrice, stock } =
-    product;
+export const ProductItem = (producto, onUpdate, onDelete) => {
+  const {
+    id,
+    descripcion,
+    precioUnitario,
+    descuento,
+    stock,
+    precioConDescuento,
+  } = producto;
 
   const formatUnit = (stock) => (stock === 1 ? `unidad` : `unidades`);
 
@@ -14,16 +19,17 @@ export const ProductItem = (product, onUpdate, onDelete) => {
           <strong>ID:</strong> {id}
         </p>
         <p>
-          <strong>Descripción:</strong> {description}
+          <strong>Descripción:</strong> {descripcion}
         </p>
         <p>
-          <strong>Precio Unitario:</strong> ${price.toFixed(2)}
+          <strong>Precio Unitario:</strong> ${precioUnitario.toFixed(2)}
         </p>
         <p>
-          <strong>Descuento:</strong> {discountPercent}%
+          <strong>Descuento:</strong> {descuento}%
         </p>
         <p>
-          <strong>Precio con Descuento:</strong> ${discountPrice.toFixed(2)}
+          <strong>Precio con Descuento:</strong> $
+          {precioConDescuento.toFixed(2)}
         </p>
         <p>
           <strong>Cantidad:</strong> {stock} {formatUnit(stock)}
@@ -33,7 +39,7 @@ export const ProductItem = (product, onUpdate, onDelete) => {
         <button
           className="update-btn"
           onClick={() => {
-            onUpdate(product);
+            onUpdate(producto);
           }}
         >
           Modificar
