@@ -1,0 +1,58 @@
+/* ProductForm.css */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 24px;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333333;
+}
+
+h3 {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+
+label {
+    font-weight: 600;
+    font-size: 14px;
+    color: #444444;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    color: #333333;
+}
+
+p {
+    font-size: 14px;
+    font-weight: 600;
+    color: #2e7d32;
+    margin: 0;
+}
+
+button {
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+button[type="button"] {
+    background-color: #e74c3c;
+}

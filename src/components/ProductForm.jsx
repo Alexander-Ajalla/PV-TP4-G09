@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "../css/ProductForm.css"
+import "./ProductForm.css"
 
 let nextID = 0;
 
