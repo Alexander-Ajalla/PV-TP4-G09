@@ -2,8 +2,7 @@ import React, { useCallback } from "react";
 import ProductItem from "./ProductItem";
 import "../App.css";
 
-const ProductList = ({ productos, onUpdate, onDelete, onEdit }) => {
-  const memoizedOnUpdate = useCallback(onUpdate, [onUpdate]);
+const ProductList = ({ productos, onDelete, onEdit }) => {
   const memoizedOnDelete = useCallback(onDelete, [onDelete]);
   const memoizedOnEdit = useCallback(onEdit, [onEdit]);
 
@@ -17,7 +16,6 @@ const ProductList = ({ productos, onUpdate, onDelete, onEdit }) => {
         <ProductItem
           key={producto.id}
           producto={producto}
-          onUpdate={memoizedOnUpdate}
           onDelete={memoizedOnDelete}
           onEdit={memoizedOnEdit}
         />
