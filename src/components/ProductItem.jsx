@@ -1,3 +1,4 @@
+import Button from "./Button";
 import "../styles/ProductItem.css";
 
 const ProductItem = ({ producto, onEdit, onDelete }) => {
@@ -36,22 +37,40 @@ const ProductItem = ({ producto, onEdit, onDelete }) => {
         </p>
       </div>
       <div className="product-item-actions">
-        <button
+        <Button
+          type="button"
+          className="button-warning"
+          onClick={() => {
+            onEdit(producto);
+          }}
+        >
+          Modificar
+        </Button>
+        {/**<button
           className="edit-btn"
           onClick={() => {
             onEdit(producto);
           }}
         >
           Modificar
-        </button>
-        <button
+        </button> */}
+        <Button
+          type="button"
+          className="button-danger"
+          onClick={() => {
+            onDelete(id);
+          }}
+        >
+          Eliminar
+        </Button>
+        {/**<button
           className="delete-btn"
           onClick={() => {
             onDelete(id);
           }}
         >
           Eliminar
-        </button>
+        </button> */}
       </div>
     </li>
   );
