@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "../styles/ProductForm.css";
-import "./Button.jsx"
+import Button from "./Button.jsx"
 function ProductForm({ productoEditado, setProductoEditado, onSubmit }) {
   const [descripcion, setDescripcion] = useState("");
   const [precioUnitario, setPrecioUnitario] = useState("");
