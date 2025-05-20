@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./ProductForm.css";
+import "../styles/ProductForm.css";
 
 function ProductForm({ productoEditado, setProductoEditado, onSubmit }) {
   const [descripcion, setDescripcion] = useState("");

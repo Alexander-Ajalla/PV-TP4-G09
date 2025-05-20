@@ -1,4 +1,4 @@
-import "./ProductItem.css";
+import "../styles/ProductItem.css";
 
 const ProductItem = ({producto, onEdit, onDelete}) => {
   const {
