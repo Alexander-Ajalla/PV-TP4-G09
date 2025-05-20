@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "../styles/ProductForm.css";
-
+import "./Button.jsx"
 function ProductForm({ productoEditado, setProductoEditado, onSubmit }) {
   const [descripcion, setDescripcion] = useState("");
   const [precioUnitario, setPrecioUnitario] = useState("");
@@ -115,13 +115,13 @@ function ProductForm({ productoEditado, setProductoEditado, onSubmit }) {
           onChange={(e) => setStock(e.target.value)}
         />
         <p>Precio con descuento: ${precioConDescuento}</p>
-        <button type="submit">
-          {productoEditado ? "Guardar Cambios" : "Agregar Producto"}
-        </button>
+         <Button type="submit" color="primary">
+                {productoEditado ? "Guardar Cambios" : "Agregar Producto"}
+         </Button>
         {productoEditado && (
-          <button type="button" onClick={handleCancelar}>
-            Cancelar
-          </button>
+          <Button type="button" color="secondary" onClick={handleCancelar}>
+              Cancelar
+          </Button>
         )}
       </form>
     </div>
