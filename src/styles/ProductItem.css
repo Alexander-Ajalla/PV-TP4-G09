@@ -38,7 +38,7 @@
   gap: 10px;
 }
 
-.edit-btn .delete-btn {
+/**.edit-btn .delete-btn {
   transition: background-color 0.2s ease, filter 0.2s ease;
 }
 
@@ -60,4 +60,4 @@
 .delete-btn:hover {
   background-color: #a71d2a;
   filter: brightness(95%);
-}
+}*/
