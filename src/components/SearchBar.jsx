@@ -1,4 +1,5 @@
 import { useState, useMemo, useEffect } from "react";
+import "../styles/SearchBar.css";
 
 function SearchBar({ productos, onFiltrar }) {
   const [termino, setTermino] = useState("");
@@ -23,15 +24,18 @@ function SearchBar({ productos, onFiltrar }) {
   }, [productosFiltrados, onFiltrar]);
 
   return (
-    <div style={{ margin: "20px 0", textAlign: "center" }}>
-      <label>Buscar producto (por ID o descripción): </label>
-      <input
-        type="text"
-        value={termino}
-        onChange={handleChange}
-        placeholder="Ej: 1 o zapatillas"
-      />
-    </div>
+    <div className="search-container">
+  <label htmlFor="buscar">Buscar producto (por ID o descripción): </label>
+  <input
+    id="buscar"
+    type="text"
+    value={termino}
+    onChange={handleChange}
+    placeholder="Ej: 1 o zapatillas"
+    className="search-input"
+  />
+</div>
+
   );
 }
 
