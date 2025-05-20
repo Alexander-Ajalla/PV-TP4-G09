@@ -1,6 +1,6 @@
 import "../styles/ProductItem.css";
 
-const ProductItem = ({producto, onEdit, onDelete}) => {
+const ProductItem = ({ producto, onEdit, onDelete }) => {
   const {
     id,
     descripcion,
@@ -13,7 +13,7 @@ const ProductItem = ({producto, onEdit, onDelete}) => {
   const formatUnit = (stock) => (stock === 1 ? "unidad" : "unidades");
 
   return (
-    <li class="product-item">
+    <li className="product-item">
       <div className="product-item-details">
         <p>
           <strong>ID:</strong> {id}
