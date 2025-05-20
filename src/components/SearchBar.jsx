@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 
 function SearchBar({ productos, onFiltrar }) {
   const [termino, setTermino] = useState("");
@@ -6,17 +6,21 @@ function SearchBar({ productos, onFiltrar }) {
   // useMemo para filtrar productos solo cuando cambian productos o término
   const productosFiltrados = useMemo(() => {
     const terminoLower = termino.toLowerCase().trim();
-    return productos.filter((producto) =>
-      producto.descripcion.toLowerCase().includes(terminoLower) ||
-      producto.id.toString() === terminoLower
+    return productos.filter(
+      (producto) =>
+        producto.descripcion.toLowerCase().includes(terminoLower) ||
+        producto.id.toString() === terminoLower
     );
   }, [productos, termino]);
 
   // Cada vez que cambia el término, notificamos al padre con los productos filtrados
   const handleChange = (e) => {
     setTermino(e.target.value);
-    onFiltrar(productosFiltrados);
   };
+
+  useEffect(() => {
+    onFiltrar(productosFiltrados);
+  }, [productosFiltrados, onFiltrar]);
 
   return (
     <div style={{ margin: "20px 0", textAlign: "center" }}>
