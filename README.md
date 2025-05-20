@@ -48,8 +48,8 @@ Cada producto se representa con las siguientes propiedades:
 - Alexander Natanael Ajalla ➡ [Alexander-Ajalla](https://github.com/Alexander-Ajalla)
 - Barrientos Lautaro Nicolás ➡ [Lautaro Barrientos](https://github.com/BarrientosLautaro)
 - Ivo Thaiel Vicencio Rosas ➡ [IvoThaielVicencioRosas](https://github.com/ivothaiel)
-- Álvarez Carlos Matías ➡ [AlvarezCarlosMatias](https://github.com/MaxiSanchez27)
-- Sánchez Ariel Maximiliano ➡ [MaxiSanchez27](https://github.com/MintBlue06)
+- Álvarez Carlos Matías ➡ [AlvarezCarlosMatias](https://github.com/MintBlue06)
+- Sánchez Ariel Maximiliano ➡ [MaxiSanchez27](https://github.com/MaxiSanchez27)
 
 ## Tecnologías utilizadas 🛠️
 
