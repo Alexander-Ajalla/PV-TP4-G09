@@ -1,0 +1,16 @@
+/* Fuente global */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9; /* Fondo claro, suave para evitar blanco puro */
+  color: #333; /* Color texto base oscuro para buena legibilidad */
+  line-height: 1.5; /* Mejor espacio entre líneas */
+}
+
+/* Normalizar márgenes de títulos y párrafos */
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0 0 1rem 0;
+}
+
+
