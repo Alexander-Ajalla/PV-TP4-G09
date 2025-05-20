@@ -1,6 +1,6 @@
-import "ProductItem.css";
+import "./ProductItem.css";
 
-const ProductItem = (producto, onEdit, onDelete) => {
+const ProductItem = ({producto, onEdit, onDelete}) => {
   const {
     id,
     descripcion,
@@ -10,7 +10,7 @@ const ProductItem = (producto, onEdit, onDelete) => {
     precioConDescuento,
   } = producto;
 
-  const formatUnit = (stock) => (stock === 1 ? `unidad` : `unidades`);
+  const formatUnit = (stock) => (stock === 1 ? "unidad" : "unidades");
 
   return (
     <li class="product-item">
